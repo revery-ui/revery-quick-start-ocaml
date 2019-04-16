@@ -1,5 +1,3 @@
-[![Build Status](https://dev.azure.com/revery-ui/revery/_apis/build/status/revery-ui.revery-quick-start?branchName=master)](https://dev.azure.com/revery-ui/revery/_build/latest?definitionId=4?branchName=master)
-
 # revery-quick-start
 
 ---
@@ -9,7 +7,7 @@ __Clone and run for a quick way to see Revery in action.__
 This is a minimal Revery application to get you started.
 
 The most important file here is:
-- `app.re` - This is the core application code, responsible for __creating a window__ and __rendering__.
+- `App.ml` - This is the core application code, responsible for __creating a window__ and __rendering__.
 
 A Revery application also needs these files:
 - `package.json` - [esy configuration]() - lists the OCaml/Reason dependencies.
@@ -36,9 +34,9 @@ or with esy:
 
 ```
 # Clone the repository
-git clone https://github.com/bryphe/revery-quick-start
+git clone https://github.com/revery-ui/revery-quick-start-ocaml
 # Go into the repository
-cd revery-quick-start
+cd revery-quick-start-ocaml
 # Install dependencies
 esy install
 # Build dependencies
