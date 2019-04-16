@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/revery-ui/revery/_apis/build/status/revery-ui.revery-quick-start-ocaml?branchName=master)](https://dev.azure.com/revery-ui/revery/_build/latest?definitionId=10&branchName=master)
+
 # revery-quick-start-ocaml
 
 ---
