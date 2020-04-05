@@ -3,28 +3,46 @@
   "version": "1.3.0",
   "description": "Revery quickstart",
   "license": "MIT",
-  "esy": {
-    "build": "refmterr dune build -p App",
-    "buildsInSource": "_build"
-  },
-  "dependencies": {
-    "ocaml": "~4.7.0",
-    "revery": "^0.9.0",
-    "@opam/dune": "*"
-  },
-  "resolutions": {
-    "@opam/cmdliner": "1.0.2",
-    "@opam/js_of_ocaml": "github:ocsigen/js_of_ocaml:js_of_ocaml.opam#db257ce",
-    "@opam/js_of_ocaml-compiler": "github:ocsigen/js_of_ocaml:js_of_ocaml-compiler.opam#db257ce",
-    "@brisk/brisk-reconciler": "github:briskml/brisk-reconciler#daa00be",
-    "rebez": "github:jchavarri/rebez#46cbc183"
-  },
   "scripts": {
    "format": "bash -c \"refmt --in-place *.re\"",
    "run": "esy x App"
   },
+  "esy": {
+    "build": "refmterr dune build -p App",
+    "buildsInSource": "_build",
+    "install": [
+      "esy-installer App.install"
+    ]
+  },
+  "revery-packager": {
+    "bundleName": "ExampleApp",
+    "bundleId": "com.example.app",
+    "displayName": "Revery Example App",
+    "mainExecutable": "App",
+    "windows": {
+      "packages": ["zip"],
+      "iconFile": "assets/icon.ico"
+    },
+    "darwin": {
+      "packages": ["tar", "dmg"],
+      "iconFile": "assets/icon.icns"
+    },
+    "linux": {
+      "packages": ["tar", "appimage"]
+    }
+  },
+  "dependencies": {
+    "revery": "revery-ui/revery#3c23304",
+    "@opam/dune": "*",
+    "timber": "1.0.0",
+    "esy-macdylibbundler": "*"
+  },
+  "resolutions": {
+    "@opam/cmdliner": "1.0.2",
+    "esy-cmake": "prometheansacrifice/esy-cmake#2a47392def755"
+  },
   "devDependencies": {
-    "ocaml": "~4.7.0",
+    "ocaml": "~4.8.0",
     "@opam/merlin": "*"
   }
 }

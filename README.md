@@ -18,10 +18,9 @@ A Revery application also needs these files:
 
 ### Prerequisites
 
-- Install [Git](https://git-scm.com/)
-- Install [Esy](https://esy.sh/) __0.5.6+__
+See the [requirements for building Revery](https://github.com/revery-ui/revery/wiki/Building-&-Installing)
 
-### Build
+### Native Build
 
 - `esy install`
 - `esy build`
@@ -48,6 +47,18 @@ esy run
 ```
 
 > __NOTE:__ The first build will take a while - building the OCaml compiler and dependencies takes time! Subsequent builds, though, should be very fast.
+
+### Releasing
+
+To create packages for distribution, follow these steps:
+
+- `npm install -g revery-packager`
+
+From the `revery-quick-start` folder, run:
+
+- `revery-packager`
+
+Once complete, there will be application packages available in the `_release` folder.
 
 ### Resources
 
