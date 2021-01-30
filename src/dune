@@ -2,6 +2,7 @@
     (name App)
     (package App)
     (public_name App)
+    (preprocess (pps brisk-reconciler.ppx))
     (libraries
         bigarray
         Revery
