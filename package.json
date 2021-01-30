@@ -9,17 +9,11 @@
   },
   "dependencies": {
     "@esy-ocaml/reason": "^3.6.0",
-    "revery": "revery-ui/revery#0c3be5dde1e223f5a986bfd2e364fcaa4fb79f66",
-    "@glennsl/timber": "^1.2.0",
+    "revery": "revery-ui/revery#431e515a00ee46f7bc614a10c2a219aae13179e0",
     "ocaml": "4.10.0000"
   },
   "resolutions": {
     "esy-skia": "revery-ui/esy-skia#60e026069a50abd6d388a0928cbabb516c666d2d"
-
-    // "@onivim/reason-native-crash-utils": "github:onivim/reason-native-crash-utils#ae1fd34",
-    // "esy-pcre2": "github:esy-packages/esy-pcre#c5076c8",
-    // "esy-nasm":"revery-ui/esy-nasm#599f360",
-    // "@opam/lru":"bryphe/lru:lru.opam#2708c70"
   },
   "scripts": {
    "format": "bash -c \"refmt --in-place *.re\"",
