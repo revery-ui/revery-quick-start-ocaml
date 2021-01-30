@@ -1,11 +1,21 @@
 # Cross-platform set of build steps for building esy projects
 
 steps:
-  - script: npm install -g esy@0.5.6
-    displayName: 'npm install -g esy@0.5.6'
+  - script: npm install -g esy@0.6.2
+    displayName: 'npm install -g esy@0.6.2'
+  - script: npm install -g revery-packager
+    displayName: 'npm install -g revery-packager'
   - script: esy install
     displayName: 'esy install'
+  - script: git diff --exit-code
+    displayName: 'check that `esy.lock` is up-to-date. If this fails, commit `esy.lock` changes and re-submit PR.'
   - script: esy build
     displayName: 'esy build'
-  # Run tests or any additional steps here
-  # - script: esy b dune runtest
+  - script: esy format
+    displayName: 'esy format'
+  - script: git diff --exit-code
+    displayName: 'check that formatting is correct. If this fails, run `esy format` and re-submit PR.'
+  - script: revery-packager
+    displayName: 'revery-packager'
+  - script: esy b dune build @check
+    displayName: 'esy b dune build @check'
