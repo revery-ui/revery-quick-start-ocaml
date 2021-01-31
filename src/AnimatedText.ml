@@ -32,7 +32,7 @@ module Styles =
                 (Padding.createElement
                   ~padding:6
                   ~children:[
-                    (Text.createElement ~style:(Styles.text yOffset) ~text:text ~children:[] () [@JSX ])
+                    (Text.createElement ~style:(Styles.text ~yOffset) ~text:text ~children:[] () [@JSX ])
                   ]
                   [@JSX ])
                   ()

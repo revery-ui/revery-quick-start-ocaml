@@ -10,7 +10,8 @@
   "dependencies": {
     "@esy-ocaml/reason": "^3.6.0",
     "revery": "revery-ui/revery#431e515a00ee46f7bc614a10c2a219aae13179e0",
-    "ocaml": "4.10.0000"
+    "ocaml": "4.10.0000",
+    "esy-macdylibbundler": "*"
   },
   "resolutions": {
     "esy-skia": "revery-ui/esy-skia#60e026069a50abd6d388a0928cbabb516c666d2d"
